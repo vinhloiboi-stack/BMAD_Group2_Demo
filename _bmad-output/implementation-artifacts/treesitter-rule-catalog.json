@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "scope": "Phase 1",
+  "rules": [
+    {
+      "id": "RULE-NAMING-CLASS",
+      "severity": "warning",
+      "description": "Class names must follow PascalCase.",
+      "source": "tree-sitter"
+    },
+    {
+      "id": "RULE-NAMING-FUNCTION",
+      "severity": "warning",
+      "description": "Function names must follow camelCase.",
+      "source": "tree-sitter"
+    },
+    {
+      "id": "RULE-FORBIDDEN-FUNCTION",
+      "severity": "warning",
+      "description": "Forbidden function usage detected.",
+      "source": "tree-sitter"
+    },
+    {
+      "id": "RULE-FORBIDDEN-TOKEN",
+      "severity": "warning",
+      "description": "Forbidden token usage detected.",
+      "source": "token-scan"
+    },
+    {
+      "id": "RULE-INCLUDE-ORDER-GROUP",
+      "severity": "warning",
+      "description": "System includes must appear before local includes.",
+      "source": "include-structure"
+    },
+    {
+      "id": "RULE-INCLUDE-ORDER-SORT",
+      "severity": "warning",
+      "description": "Includes should be alphabetically sorted within groups.",
+      "source": "include-structure"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "naming": {
+    "enabled": true,
+    "classPascalCase": "^[A-Z][A-Za-z0-9]*$",
+    "functionCamelCase": "^[a-z][A-Za-z0-9]*$",
+    "ignoreFunctionNames": [
+      "main"
+    ]
+  },
+  "forbiddenConstructs": {
+    "enabled": true,
+    "forbiddenFunctions": [
+      "malloc",
+      "free",
+      "strcpy",
+      "strcat"
+    ],
+    "forbiddenTokens": [
+      "goto"
+    ]
+  },
+  "includeStructure": {
+    "enabled": true,
+    "requireSystemBeforeLocal": true,
+    "sortWithinGroups": true
+  },
+  "fileExtensions": [
+    ".cpp",
+    ".cc",
+    ".cxx",
+    ".hpp",
+    ".hh",
+    ".hxx",
+    ".h"
+  ]
+}

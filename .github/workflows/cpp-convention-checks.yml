@@ -1,0 +1,28 @@
+name: cpp-convention-checks
+
+on:
+  pull_request:
+    branches: ["**"]
+  workflow_dispatch:
+
+jobs:
+  convention-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install checker dependencies
+        working-directory: tools/convention-checks
+        run: npm install
+
+      - name: Run tree-sitter convention checks (warn-only)
+        working-directory: tools/convention-checks
+        run: node src/run-checks.js --changed --warn-only
